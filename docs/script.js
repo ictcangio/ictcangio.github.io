@@ -1,21 +1,55 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const wrapper = document.getElementById('scrolling-text-wrapper');
-    const content = wrapper.querySelector('.text-item').parentNode; 
-    
-    // **Bước 1: Nhân đôi nội dung**
-    // Lấy bản sao của nội dung gốc (tất cả các .text-item)
-    const clone = content.cloneNode(true);
-    
-    // Đặt ID tạm thời để CSS không áp dụng animation hai lần, 
-    // sau đó đổi tên class của wrapper bên trong để CSS Keyframes hoạt động đúng
-    clone.removeAttribute('id'); 
-    
-    // Thêm bản sao vào cuối container
-    wrapper.appendChild(clone);
-    
-    // **Bước 2 (Tùy chọn): Điều chỉnh Keyframes bằng JS (Nếu bạn không dùng Keyframes đơn giản)**
-    // Nếu bạn muốn tính toán chiều cao nội dung động thay vì dùng giá trị -50% cứng
-    // Có thể bỏ qua bước này vì Keyframes với nội dung nhân đôi đã hoạt động tốt.
-    
-    console.log("Nội dung đã được nhân đôi để tạo hiệu ứng cuộn vô hạn.");
-});
+const canvas = document.getElementById('snowCanvas');
+const ctx = canvas.getContext('2d');
+
+let width, height, particles;
+
+// Cấu hình
+const particleCount = 100; // Số lượng hạt
+const particleColor = "rgba(0, 242, 255, 0.5)"; // Màu xanh Cyan đồng bộ với logo
+
+function init() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
+
+    particles = [];
+    for (let i = 0; i < particleCount; i++) {
+        particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            size: Math.random() * 3 + 1,
+            speed: Math.random() * 1 + 0.5,
+            opacity: Math.random()
+        });
+    }
+}
+
+function draw() {
+    ctx.clearRect(0, 0, width, height);
+    ctx.fillStyle = particleColor;
+
+    particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Di chuyển hạt
+        p.y += p.speed;
+        
+        // Nếu hạt rơi hết màn hình, quay lại lên trên
+        if (p.y > height) {
+            p.y = -10;
+            p.x = Math.random() * width;
+        }
+    });
+
+    requestAnimationFrame(draw);
+}
+
+// Xử lý khi thay đổi kích thước trình duyệt
+window.addEventListener('resize', init);
+
+// Khởi chạy
+init();
+draw();
