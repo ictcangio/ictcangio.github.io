@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+    <link rel="icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TechBlog Main Section</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff0000",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#230f0f",
+                        "surface-dark": "#2f1515",
+                        "text-secondary": "#ce8d8d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Custom scrollbar hiding for horizontal scroll areas */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+
+  <style>
+    .floating-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  background-color: #007bff; /* Màu xanh chuyên nghiệp, bạn có thể đổi thành màu logo */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px; /* Bo tròn tạo sự dễ chịu */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 9999;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+/* Hiệu ứng khi di chuột vào (Hover) */
+.floating-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-5px); /* Nút bay lên nhẹ */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ẩn chữ trên màn hình điện thoại nhỏ nếu muốn chỉ để lại icon */
+@media (max-width: 480px) {
+  .btn-text {
+    display: none;
+  }
+  .floating-btn {
+    padding: 15px;
+    border-radius: 50%;
+  }
+}
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white transition-colors duration-200">
+    <a href="https://ictcangio.github.io/" class="floating-btn" title="Về trang dịch vụ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span class="btn-text">TECH SOLUTIONS</span>
+      </a>
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- Header -->
+<div class="sticky top-0 z-40 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200 dark:border-white/5 p-4 flex items-center justify-between">
+<button class="text-gray-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+<h1 class="text-primary text-xl font-extrabold tracking-tight flex-1 text-center">ictBlog<span class="text-gray-900 dark:text-white">.vn</span></h1>
+<button class="text-gray-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-[28px]">search</span>
+</button>
+</div>
+<!-- Featured Posts Section -->
+<section class="w-full pt-6 px-4">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-2xl font-bold leading-tight tracking-tight">Featured Posts</h2>
+<a class="text-primary text-sm font-semibold" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Featured Item 1 -->
+<div class="group relative flex flex-col gap-2 cursor-pointer">
+<div class="w-full aspect-[4/3] bg-gray-200 dark:bg-surface-dark rounded-lg overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Close up of a modern laptop keyboard with red backlight" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGyR5JVrp-AwO2sieucG5r67_0_nidv3gDZwaZ66cJ5RCnvQYnaseiF_x3_C4IkV3rYq8rkU6Q4q553fA1o0ZWcngFnamQU5Xdo7keFVgMrMIRx-N6sJdiVmj7e68KfCtP8NvsZCWCxab-EovdGS6wjU-tMn8l74qh0FlDtvcyzayKQi6Z1OG1XwROaNhh1mPBa4Nd17JIVaJF8a451bRZ31E0lzS2wCL-rFHvCuLotcnT7IlF7r6y8xKgUbI9kIhJeYj2PGZb97Q");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded">HOT</span>
+</div>
+<div>
+<h3 class="text-sm font-bold leading-snug line-clamp-2">Windows 11 23H2 Full Review: Worth the upgrade?</h3>
+<p class="text-text-secondary text-xs mt-1">2 hours ago</p>
+</div>
+</div>
+<!-- Featured Item 2 -->
+<div class="group relative flex flex-col gap-2 cursor-pointer">
+<div class="w-full aspect-[4/3] bg-gray-200 dark:bg-surface-dark rounded-lg overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Abstract digital network connections background in red and black" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAX6dIpDSQN2skuC7tb324HvKr8VJ_FyPdbwQRE8vxaZHDekHd_n9-IlKVu-YmrqLsHaxDWSpVSeuWOKGcnHLjWDW2vawZjalS9h9czs38DsFMUHiXOwo5bNUC_p3Hwq771wbZi8xivfz8R6BeA70SrQ_mNZTrYVhrNtliCPSwijTedNGZH6oh7Xju-i0ZsV6Bi6GWfI4PRHHk-JeR2DadNuv3kqNgzakNUv22IfB6iLnmb-XU6Bm3tzFzG6cDSlp9huzDscCTcSj8");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div>
+<h3 class="text-sm font-bold leading-snug line-clamp-2">Top 10 Essential Tools for Web Developers in 2024</h3>
+<p class="text-text-secondary text-xs mt-1">5 hours ago</p>
+</div>
+</div>
+<!-- Featured Item 3 -->
+<div class="group relative flex flex-col gap-2 cursor-pointer">
+<div class="w-full aspect-[4/3] bg-gray-200 dark:bg-surface-dark rounded-lg overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Person assembling a high-end gaming PC with RGB lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCF1fxi0Pr-ADmYvIFtndY9hDXQiBFA71qK1OfE0tbWTJ_GAavXqgb5ZKJwvayPMNY7N7N7Zcvo60SE-NxifvfQiHP7GTyua1Cq0ZKGtmDqKHXPomBqtQM9-WwoPbrFQet1XOkSxIQjnUj4X2yptCQJNR4erOBi-CnMv6bgskooDpQUyO5aQTQuWgW6h-4KwlyKfjsxjWd1DE2YT3KGnkyQ_hyVp-OCk5utnFP9PllJgz1vUQF9J1iTicuQ7GtERN-IhUPzj1sogFA");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div>
+<h3 class="text-sm font-bold leading-snug line-clamp-2">PC Building Guide: Best components for gaming</h3>
+<p class="text-text-secondary text-xs mt-1">1 day ago</p>
+</div>
+</div>
+<!-- Featured Item 4 -->
+<div class="group relative flex flex-col gap-2 cursor-pointer">
+<div class="w-full aspect-[4/3] bg-gray-200 dark:bg-surface-dark rounded-lg overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Blue screen of death on a laptop monitor" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB18132gfyXMYGMMiDSNrMzHfXYcMGJElAZU6Fp87WJhiWT517lXBxnTAeR3EmVe4IvZTdsrkiluI90dNTCDSh2VjSH7fMEvvvePClS5Cvcwop6K9okEkLt8AHuEf7pqP49RDp3T17shsTTT-U80yRFiJOfGGXHU4gvZbp6fCWIqsxoHsGdLFkmW67rdSmPpSeYg9Y0Qby08agXb0hYblO7_xkz5SY3DLBZReYezRCFFCdtwDUaRGGMJ1pqwDjFsWG8aL5_OvrvPUw");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div>
+<h3 class="text-sm font-bold leading-snug line-clamp-2">How to Fix Common BSOD Errors instantly</h3>
+<p class="text-text-secondary text-xs mt-1">2 days ago</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Divider -->
+<div class="h-2 bg-transparent"></div>
+<!-- Category: WINDOWS OS -->
+<section class="w-full py-6">
+<div class="flex items-center justify-between px-4 mb-3">
+<h3 class="text-primary text-sm font-bold uppercase tracking-wider">WINDOWS OS</h3>
+<a class="text-gray-500 dark:text-gray-400 text-xs font-medium flex items-center hover:text-primary transition-colors" href="#">
+                    View All <span class="material-symbols-outlined text-[16px] ml-0.5">chevron_right</span>
+</a>
+</div>
+<!-- Hero Card -->
+<div class="px-4 mb-4">
+<div class="flex flex-col rounded-xl overflow-hidden shadow-lg bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5">
+<div class="w-full aspect-video bg-cover bg-center" data-alt="Windows 11 desktop screenshot with start menu open" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAc_fjV87dK4GxVYVRtLlESf9k4PHk1Kx3z9XIgrht34PfBofug4mAiCrh7ZrUhLVZbdzLkdRDi83GVivPYE0F1xH5Y6wSTbwLxylbNmui9VYcYCVfoahD4vwNOJe9QrMquAbd3ilY6EYhfpM6FhhZ9f7ifow3frAAJeH6K-dwXy0l4AIOKr7nX6MfRNPpUogLh-Iy1lo4XifyIjZcXYM8pMeTmZg7hglPU2aAjfkccvPhTm1cII3m0CT8i0nTHhSjo97gcVByuq-E");'>
+</div>
+<div class="p-4">
+<span class="inline-block py-1 px-2 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase mb-2">Tutorial</span>
+<h4 class="text-lg font-bold leading-tight mb-2">Download Windows 10 22H2 Original ISO from Microsoft</h4>
+<p class="text-gray-500 dark:text-text-secondary text-sm line-clamp-2 mb-3">A detailed step-by-step guide on how to get the latest official ISO directly from the source without any third-party tools.</p>
+<div class="flex items-center justify-between">
+<span class="text-xs text-gray-400">By Admin • 4 hours ago</span>
+<span class="material-symbols-outlined text-primary text-xl">arrow_circle_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- List Items -->
+<div class="px-4 flex flex-col gap-4">
+<article class="flex gap-3 items-start group">
+<div class="w-24 h-24 shrink-0 rounded-lg bg-cover bg-center" data-alt="Close up of USB flash drive plugged into laptop" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDB-7elcDSFbDUtIE-mIKNsRcdfOkCP5-I6GYiXoQ8yUrFy_zizzOGbecPhMefes1PqYPWE4eBM2fdKOukGZbB-7ACue9w0Z5goP2_EKZIA5AebYO6btmbNBOo5DIPwGQ3PTPwRH3HpoUEgKxoNzTV7HAkhkKskV187fTAgiABZRAfZJSPZ7nSEPBD8AvubbEs3LrrHeI1PEHUgTgskzhB7nyGIT3Dd9tm0NFJL8aGMycsyOwpzydk9-FfXLRLHVC3lAijmWi0rzqE");'></div>
+<div class="flex flex-col justify-center h-24 border-b border-gray-200 dark:border-white/5 w-full pr-2 group-last:border-0">
+<h5 class="font-semibold text-sm leading-snug mb-1 line-clamp-2 group-hover:text-primary transition-colors">How to create a bootable USB for Windows 11 installation</h5>
+<p class="text-xs text-gray-500 dark:text-gray-400">Oct 24, 2023</p>
+</div>
+</article>
+<article class="flex gap-3 items-start group">
+<div class="w-24 h-24 shrink-0 rounded-lg bg-cover bg-center" data-alt="Laptop screen showing command prompt terminal" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHZ_8QJaXLnmcqKQx8benIe06r5mBoOMmQMl9_F2_XjwQBXo_TxDOIWnGyDMlCM5-ejIm9wI0FTSR9Zn-eqgW0qjl0uNdzct1sG1u1KZ2Q33p-I8GnFuO0uxHz1o5Z4c-d52JhqUHYTHoRtKz8yyPRPtuqhAr1xBxhfSoy_DTb88iWV1u9JHsN-kQQ1n0ZXnQZOGiDV90NsPjwGXsK5pNf1QqvbtxzVmm85RgdwXzYiWbLTm4uoKwhv7nLgUhnTGzO2J1qALRdEN8");'></div>
+<div class="flex flex-col justify-center h-24 border-b border-gray-200 dark:border-white/5 w-full pr-2 group-last:border-0">
+<h5 class="font-semibold text-sm leading-snug mb-1 line-clamp-2 group-hover:text-primary transition-colors">Remove Bloatware from Windows 10 with this simple script</h5>
+<p class="text-xs text-gray-500 dark:text-gray-400">Oct 20, 2023</p>
+</div>
+</article>
+<article class="flex gap-3 items-start group">
+<div class="w-24 h-24 shrink-0 rounded-lg bg-cover bg-center" data-alt="Settings menu icon on dark background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTTMoJXDScJw2tbIhn1mXLV1lB5Pgya5epfy_zI-Lj7gsdsbdqw_yDXdwNrXH_nWcyoL2-QlnRhXJVB52QglP7sXeYrJPbZSEkgo1kEOKlK2UxK9cBZjKc5ld_BP7D9cCiGSOoBLhNEAz3E7B8gxyTTtqyqBjxIFMiIa4_Q8J-2tj1DjSJw4LpiLwQUtJcV65Y0ibWPjt0sUVXlXkFKoXSdWU8Sdj4RPlxV0yus5MmmEK5_S-_ZibiEbo2cE5baLywctjBiKGDO4g");'></div>
+<div class="flex flex-col justify-center h-24 border-b border-gray-200 dark:border-white/5 w-full pr-2 group-last:border-0">
+<h5 class="font-semibold text-sm leading-snug mb-1 line-clamp-2 group-hover:text-primary transition-colors">Optimizing Windows Registry for better gaming performance</h5>
+<p class="text-xs text-gray-500 dark:text-gray-400">Oct 18, 2023</p>
+</div>
+</article>
+</div>
+</section>
+<!-- Category: GHOST WINDOWS (Horizontal Scroll) -->
+<section class="w-full py-6 bg-gray-100 dark:bg-[#1a0b0b]">
+<div class="flex items-center justify-between px-4 mb-4">
+<h3 class="text-primary text-sm font-bold uppercase tracking-wider">GHOST WINDOWS</h3>
+<a class="text-gray-500 dark:text-gray-400 text-xs font-medium flex items-center hover:text-primary transition-colors" href="#">
+                    View All <span class="material-symbols-outlined text-[16px] ml-0.5">chevron_right</span>
+</a>
+</div>
+<div class="flex overflow-x-auto gap-4 px-4 pb-4 no-scrollbar snap-x snap-mandatory">
+<!-- Card 1 -->
+<div class="snap-center shrink-0 w-[280px] bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-white/5">
+<div class="aspect-video bg-cover bg-center relative" data-alt="Abstract colorful ghost swirl background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUrHmaOFVYckBAbSBJVLlSnTWSQq1Chct7uHVyiTptgrYzL-aBU49k9vrtihY9NRHR-0xygtxKsUiN53-WAj97-CKkZd6Y0bwj9m_2I_O_RGWAKK4QlULKDlvFP8f5QoknvoTOvvD8uu9i6ONEhMN_34ezhNhN7TUJ3_b18nexuRqaHMvZ1KwRprd1rWtGQe8RkV_bQ3zryk_XxoMWQ93k2ik1XDaCkcSBhzpB3yL0n-zSmyZP5q5_MIpdakgWFOE5bI03ltAcPks");'>
+<span class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded">v2.0</span>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm leading-snug mb-1 line-clamp-2">Ghost Win 11 22H2 No Soft Full Driver</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-base text-gray-400">download</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">12.5k Downloads</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="snap-center shrink-0 w-[280px] bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-white/5">
+<div class="aspect-video bg-cover bg-center relative" data-alt="Dark abstract geometric background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0JY6d9gYKi5gD3YWjKFgJWurD2v6QlVlI0Es92RskUVldsjZ_xEkGjWzJMSsyisj2fOuPasoGlHbrnmPWQMjQ94hmrdZl1D0cBQYy6Vw5HD5oxs2D5hqR_eZLplN2ZDEPp6K4E7M8QVqSSQ07EHvxoKbAVmf-cwE3klfybFsRw0igRQGAH5MtnGZ68-IlhTqfHso3PfYmY9OY2mln8I2t3KT5IAlN7Zcb_O9zlFVVpbo_LLwkzr0-KbNVAbSgY_JRH-NLlixvNYI");'>
+<span class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded">Lite</span>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm leading-snug mb-1 line-clamp-2">Ghost Win 10 Super Lite for Gaming 2024</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-base text-gray-400">download</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">8.2k Downloads</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="snap-center shrink-0 w-[280px] bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-white/5">
+<div class="aspect-video bg-cover bg-center relative" data-alt="Blue motherboard circuit detail macro" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBqH_ROqUQtUlwAHlmDVu9MHMjHSp_SEFhSJrFw34-VGkWWWdqEKhBzQ_NUVhVhKX8OmQP_qhIPDDbBlhtOwbB9Ng8aQRXImS9GcU92P9WYe1pbla7jgipLW-o0NAvuKWx85ICwoYL3M8O6ru_SEFD13GNl_r9iQlDW_YtiGoRcke10go78hD4husEt7-W_F6aY8iuAawQyY2rJLiY6Z4Tfx1xGmuYizF-hcUqAomua-HzLIiq5DF7AwGl00BytheVKvIpkJdNA54o");'>
+<span class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded">Full</span>
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm leading-snug mb-1 line-clamp-2">Ghost Win 7 Ultimate 64bit Smooth &amp; Stable</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-base text-gray-400">download</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">5.1k Downloads</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: PHẦN MỀM (SOFTWARE) -->
+<section class="w-full py-6">
+<div class="flex items-center justify-between px-4 mb-4">
+<h3 class="text-primary text-sm font-bold uppercase tracking-wider">PHẦN MỀM</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 px-4">
+<div class="bg-white dark:bg-surface-dark p-3 rounded-lg flex items-center gap-3 border border-gray-200 dark:border-white/5 shadow-sm">
+<div class="size-10 rounded-lg bg-blue-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white">description</span>
+</div>
+<div>
+<h4 class="text-sm font-bold">Office 2021</h4>
+<p class="text-[10px] text-gray-500 uppercase">Productivity</p>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark p-3 rounded-lg flex items-center gap-3 border border-gray-200 dark:border-white/5 shadow-sm">
+<div class="size-10 rounded-lg bg-orange-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white">video_library</span>
+</div>
+<div>
+<h4 class="text-sm font-bold">VLC Player</h4>
+<p class="text-[10px] text-gray-500 uppercase">Multimedia</p>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark p-3 rounded-lg flex items-center gap-3 border border-gray-200 dark:border-white/5 shadow-sm">
+<div class="size-10 rounded-lg bg-green-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white">security</span>
+</div>
+<div>
+<h4 class="text-sm font-bold">Kaspersky</h4>
+<p class="text-[10px] text-gray-500 uppercase">Security</p>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark p-3 rounded-lg flex items-center gap-3 border border-gray-200 dark:border-white/5 shadow-sm">
+<div class="size-10 rounded-lg bg-purple-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white">brush</span>
+</div>
+<div>
+<h4 class="text-sm font-bold">Photoshop</h4>
+<p class="text-[10px] text-gray-500 uppercase">Design</p>
+</div>
+</div>
+</div>
+<div class="px-4 mt-4">
+<button class="w-full py-3 text-sm font-medium text-center text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-surface-dark rounded-lg hover:bg-gray-200 dark:hover:bg-white/10 transition-colors">
+                    View More Software
+                </button>
+</div>
+</section>
+<!-- Category: THỦ THUẬT (TIPS) -->
+<section class="w-full py-6 pb-8">
+<div class="flex items-center justify-between px-4 mb-4">
+<h3 class="text-primary text-sm font-bold uppercase tracking-wider">THỦ THUẬT</h3>
+</div>
+<div class="px-4 flex flex-col gap-2">
+<a class="flex items-center justify-between p-3 rounded-lg bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/5 hover:border-primary/50 transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">tips_and_updates</span>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">How to extend laptop battery life</span>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-lg">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-3 rounded-lg bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/5 hover:border-primary/50 transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">wifi</span>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Fix WiFi connection issues</span>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-lg">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-3 rounded-lg bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/5 hover:border-primary/50 transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">speed</span>
+<span class="text-sm font-medium group-hover:text-primary transition-colors">Speed up your PC in 5 minutes</span>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-lg">chevron_right</span>
+</a>
+</div>
+</section>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 w-full bg-white dark:bg-[#1a0b0b] border-t border-gray-200 dark:border-white/5 flex justify-around items-end pb-6 pt-3 z-50 shadow-[0_-5px_15px_rgba(0,0,0,0.2)]">
+<button class="flex flex-col items-center gap-1 w-16 group">
+<span class="material-symbols-outlined text-primary transition-colors">home</span>
+<span class="text-[10px] font-medium text-primary">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 w-16 group">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">grid_view</span>
+<span class="text-[10px] font-medium text-gray-500 group-hover:text-primary transition-colors">Categories</span>
+</button>
+<button class="flex flex-col items-center gap-1 w-16 group">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">bookmark</span>
+<span class="text-[10px] font-medium text-gray-500 group-hover:text-primary transition-colors">Saved</span>
+</button>
+<button class="flex flex-col items-center gap-1 w-16 group">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">person</span>
+<span class="text-[10px] font-medium text-gray-500 group-hover:text-primary transition-colors">Profile</span>
+</button>
+</nav>
+</div>
+</body></html>

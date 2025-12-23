@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 
 <html class="dark" lang="en"><head>
-    <link rel="icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>TechBlog Main Section</title>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
+<title>Tech Blog Homepage - NHUIT</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Theme Configuration -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -18,351 +15,482 @@
                 extend: {
                     colors: {
                         "primary": "#ff0000",
+                        "primary-hover": "#cc0000",
                         "background-light": "#f8f5f5",
-                        "background-dark": "#230f0f",
-                        "surface-dark": "#2f1515",
-                        "text-secondary": "#ce8d8d",
+                        "background-dark": "#1a1a1a", 
+                        "surface-dark": "#262626",
+                        "text-secondary": "#a1a1a1",
                     },
                     fontFamily: {
-                        "display": ["Inter", "sans-serif"]
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
                     },
                     borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
                 },
             },
         }
     </script>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
-        /* Custom scrollbar hiding for horizontal scroll areas */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-
-  <style>
-    .floating-btn {
-  position: fixed;
-  bottom: 80px;
-  right: 30px;
-  background-color: #007bff; /* Màu xanh chuyên nghiệp, bạn có thể đổi thành màu logo */
-  color: white;
-  padding: 12px 20px;
-  border-radius: 50px; /* Bo tròn tạo sự dễ chịu */
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  z-index: 9999;
-  font-family: sans-serif;
-  font-weight: 500;
-}
-
-/* Hiệu ứng khi di chuột vào (Hover) */
-.floating-btn:hover {
-  background-color: #0056b3;
-  transform: translateY(-5px); /* Nút bay lên nhẹ */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Ẩn chữ trên màn hình điện thoại nhỏ nếu muốn chỉ để lại icon */
-@media (max-width: 480px) {
-  .btn-text {
-    display: none;
-  }
-  .floating-btn {
-    padding: 15px;
-    border-radius: 50%;
-  }
-}
-  </style>
-  </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white transition-colors duration-200">
-    <a href="https://ictcangio.github.io/" class="floating-btn" title="Về trang dịch vụ">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-          <polyline points="9 22 9 12 15 12 15 22"></polyline>
-        </svg>
-        <span class="btn-text">TECH SOLUTIONS</span>
-      </a>
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-24">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden transition-colors duration-200">
 <!-- Header -->
-<div class="sticky top-0 z-40 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200 dark:border-white/5 p-4 flex items-center justify-between">
-<button class="text-gray-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10">
-<span class="material-symbols-outlined text-[28px]">menu</span>
-</button>
-<h1 class="text-primary text-xl font-extrabold tracking-tight flex-1 text-center">ictBlog<span class="text-gray-900 dark:text-white">.vn</span></h1>
-<button class="text-gray-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10">
-<span class="material-symbols-outlined text-[28px]">search</span>
+<header class="sticky top-0 z-50 w-full bg-[#240f0f] dark:bg-surface-dark border-b border-[#4b2020] dark:border-gray-800 shadow-md">
+<div class="max-w-[1200px] mx-auto px-4 h-16 flex items-center justify-between gap-4">
+<!-- Logo Area -->
+<div class="flex items-center gap-3 shrink-0">
+<div class="size-8 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-white text-xl font-extrabold tracking-tight leading-none">NHUIT</h1>
+<span class="text-text-secondary text-[10px] font-medium tracking-wider uppercase leading-none mt-1">Sửa Chữa Máy Tính</span>
+</div>
+</div>
+<!-- Navigation - Desktop -->
+<nav class="hidden lg:flex items-center gap-1">
+<a class="px-3 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">THỦ THUẬT</a>
+<a class="px-3 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">WINDOWS OS</a>
+<a class="px-3 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">GHOST WINDOWS</a>
+<a class="px-3 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">PHẦN MỀM</a>
+<a class="px-3 py-2 text-sm font-semibold text-primary hover:text-primary-hover hover:bg-white/5 rounded-lg transition-colors" href="#">DỊCH VỤ</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-3 shrink-0">
+<!-- Search -->
+<div class="hidden md:flex items-center h-9 bg-black/20 rounded-lg overflow-hidden border border-white/10 focus-within:border-primary/50 transition-colors w-48">
+<input class="bg-transparent border-none text-sm text-white px-3 w-full focus:ring-0 placeholder:text-gray-500 h-full" placeholder="Search..." type="text"/>
+<button class="px-2 text-gray-400 hover:text-white">
+<span class="material-symbols-outlined text-[20px]">search</span>
 </button>
 </div>
-<!-- Featured Posts Section -->
-<section class="w-full pt-6 px-4">
-<div class="flex items-center justify-between mb-4">
-<h2 class="text-2xl font-bold leading-tight tracking-tight">Featured Posts</h2>
-<a class="text-primary text-sm font-semibold" href="#">View All</a>
+<!-- Social Icons -->
+<div class="flex items-center gap-2 border-l border-white/10 pl-3">
+<a class="size-8 flex items-center justify-center rounded-lg bg-blue-600/10 text-blue-500 hover:bg-blue-600 hover:text-white transition-all" href="#">
+<i class="fa-brands fa-facebook-f text-sm font-bold">f</i> <!-- Mock icon using text for simplicity or replace with SVG -->
+</a>
+<a class="size-8 flex items-center justify-center rounded-lg bg-sky-500/10 text-sky-400 hover:bg-sky-500 hover:text-white transition-all" href="#">
+<i class="fa-brands fa-telegram text-sm font-bold">t</i>
+</a>
+<a class="size-8 flex items-center justify-center rounded-lg bg-white/5 text-white hover:bg-white/10 transition-all" href="#">
+<i class="fa-brands fa-x-twitter text-sm font-bold">x</i>
+</a>
 </div>
-<div class="grid grid-cols-2 gap-3">
+<!-- Mobile Menu Button -->
+<button class="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-4 py-6 flex flex-col gap-8">
+<!-- Hero / Featured Grid -->
+<section>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 <!-- Featured Item 1 -->
-<div class="group relative flex flex-col gap-2 cursor-pointer">
-<div class="w-full aspect-[4/3] bg-gray-200 dark:bg-surface-dark rounded-lg overflow-hidden relative">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Close up of a modern laptop keyboard with red backlight" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGyR5JVrp-AwO2sieucG5r67_0_nidv3gDZwaZ66cJ5RCnvQYnaseiF_x3_C4IkV3rYq8rkU6Q4q553fA1o0ZWcngFnamQU5Xdo7keFVgMrMIRx-N6sJdiVmj7e68KfCtP8NvsZCWCxab-EovdGS6wjU-tMn8l74qh0FlDtvcyzayKQi6Z1OG1XwROaNhh1mPBa4Nd17JIVaJF8a451bRZ31E0lzS2wCL-rFHvCuLotcnT7IlF7r6y8xKgUbI9kIhJeYj2PGZb97Q");'>
+<a class="group relative aspect-video sm:aspect-auto sm:h-48 lg:h-56 overflow-hidden rounded-lg shadow-lg" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Windows 11 interface abstract background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHQR9l_wDsit2i3c_6HdeXgh2FU1cbQSIuQspvttyR4MwdRLcVy2rwP3604Jf0YHhIiuvMTVyoPJ8wT2kG1E7Z3In7W741P9K5d6nk8qoyn0Xwp1QGmWPIjSXDTt0hd7ce03rjYimTFLrWa90m29bCw5F2WObMl8uqs14d3xpAEm4H_VXa7Oml3uBpmdMc7Fx9nEJ_EOjAMSv1fWg0clUeKJvTWCr-4npqK-M9Hr3oRl1bCJHRK8Me9b7z_f7bbi1Sg3t2xtMou34H');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-4">
+<span class="inline-block px-2 py-0.5 mb-2 text-[10px] font-bold text-white bg-primary rounded uppercase tracking-wide">Windows OS</span>
+<h3 class="text-white text-sm md:text-base font-bold leading-tight line-clamp-2 group-hover:text-primary transition-colors">Windows 11 23H2 Official ISO - Link Gốc Microsoft</h3>
 </div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-<span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded">HOT</span>
-</div>
-<div>
-<h3 class="text-sm font-bold leading-snug line-clamp-2">Windows 11 23H2 Full Review: Worth the upgrade?</h3>
-<p class="text-text-secondary text-xs mt-1">2 hours ago</p>
-</div>
-</div>
+</a>
 <!-- Featured Item 2 -->
-<div class="group relative flex flex-col gap-2 cursor-pointer">
-<div class="w-full aspect-[4/3] bg-gray-200 dark:bg-surface-dark rounded-lg overflow-hidden relative">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Abstract digital network connections background in red and black" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAX6dIpDSQN2skuC7tb324HvKr8VJ_FyPdbwQRE8vxaZHDekHd_n9-IlKVu-YmrqLsHaxDWSpVSeuWOKGcnHLjWDW2vawZjalS9h9czs38DsFMUHiXOwo5bNUC_p3Hwq771wbZi8xivfz8R6BeA70SrQ_mNZTrYVhrNtliCPSwijTedNGZH6oh7Xju-i0ZsV6Bi6GWfI4PRHHk-JeR2DadNuv3kqNgzakNUv22IfB6iLnmb-XU6Bm3tzFzG6cDSlp9huzDscCTcSj8");'>
+<a class="group relative aspect-video sm:aspect-auto sm:h-48 lg:h-56 overflow-hidden rounded-lg shadow-lg" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Cyberpunk style computer setup" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNTDuKA3upKFfI1448940lra3b4b9t2isnA1miAWLF6dDRqHIEMFCdo5-mhVRhWqaRpMVTaLo5AnyUYGUKgkJ_DEgLFH0Pve-hOQ1Iyta1G1eEBrsD0Il2vTb-y5sGA6BZGDgBwC8OhVKdqS53VjjyZwDyqsMacLnoVr2YwNQxhBYcPsxdq14cKnuuMrFB7Ss2-xBLaz3MGibfiVUad7CrLPeuQx7XAoCyQmJPTscBdwVRePHuTzw3MeTpWx6zQpGlWdAPvdU0AzcG');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-4">
+<span class="inline-block px-2 py-0.5 mb-2 text-[10px] font-bold text-white bg-purple-600 rounded uppercase tracking-wide">Ghost Win</span>
+<h3 class="text-white text-sm md:text-base font-bold leading-tight line-clamp-2 group-hover:text-primary transition-colors">Ghost Win 10 Lite Gaming - Siêu Mượt Cho Máy Yếu</h3>
 </div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-</div>
-<div>
-<h3 class="text-sm font-bold leading-snug line-clamp-2">Top 10 Essential Tools for Web Developers in 2024</h3>
-<p class="text-text-secondary text-xs mt-1">5 hours ago</p>
-</div>
-</div>
+</a>
 <!-- Featured Item 3 -->
-<div class="group relative flex flex-col gap-2 cursor-pointer">
-<div class="w-full aspect-[4/3] bg-gray-200 dark:bg-surface-dark rounded-lg overflow-hidden relative">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Person assembling a high-end gaming PC with RGB lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCF1fxi0Pr-ADmYvIFtndY9hDXQiBFA71qK1OfE0tbWTJ_GAavXqgb5ZKJwvayPMNY7N7N7Zcvo60SE-NxifvfQiHP7GTyua1Cq0ZKGtmDqKHXPomBqtQM9-WwoPbrFQet1XOkSxIQjnUj4X2yptCQJNR4erOBi-CnMv6bgskooDpQUyO5aQTQuWgW6h-4KwlyKfjsxjWd1DE2YT3KGnkyQ_hyVp-OCk5utnFP9PllJgz1vUQF9J1iTicuQ7GtERN-IhUPzj1sogFA");'>
+<a class="group relative aspect-video sm:aspect-auto sm:h-48 lg:h-56 overflow-hidden rounded-lg shadow-lg" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Modern abstract software code background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQAp-QBiRBlJazOihm4iwwEPwRifHzRltONbYWg3xMZYIprMeDPn9bneYfiGO0On49bQsTxLgEO4mzFgalF1ntjqMxx-NrGI4FvNMhNsHTQMlEx6nRgOS8kDbTqhHiBLwpI3kMziJW_N_tYC1i2ZRXyewKjPmPgP70VmmwGao9ZznyExKT9OmkyyZCvXcWvzjh8mn_zPtorU8gr0Mt640K_OpZv9dOqqhXR_Xmqb60xxG9UAxnaKOV7ylkE9dbCaq31u6d6hEvqiE8');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-4">
+<span class="inline-block px-2 py-0.5 mb-2 text-[10px] font-bold text-white bg-green-600 rounded uppercase tracking-wide">Phần Mềm</span>
+<h3 class="text-white text-sm md:text-base font-bold leading-tight line-clamp-2 group-hover:text-primary transition-colors">Top 5 Phần Mềm Cần Thiết Nhất Cho Laptop Mới 2024</h3>
 </div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-</div>
-<div>
-<h3 class="text-sm font-bold leading-snug line-clamp-2">PC Building Guide: Best components for gaming</h3>
-<p class="text-text-secondary text-xs mt-1">1 day ago</p>
-</div>
-</div>
+</a>
 <!-- Featured Item 4 -->
-<div class="group relative flex flex-col gap-2 cursor-pointer">
-<div class="w-full aspect-[4/3] bg-gray-200 dark:bg-surface-dark rounded-lg overflow-hidden relative">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Blue screen of death on a laptop monitor" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB18132gfyXMYGMMiDSNrMzHfXYcMGJElAZU6Fp87WJhiWT517lXBxnTAeR3EmVe4IvZTdsrkiluI90dNTCDSh2VjSH7fMEvvvePClS5Cvcwop6K9okEkLt8AHuEf7pqP49RDp3T17shsTTT-U80yRFiJOfGGXHU4gvZbp6fCWIqsxoHsGdLFkmW67rdSmPpSeYg9Y0Qby08agXb0hYblO7_xkz5SY3DLBZReYezRCFFCdtwDUaRGGMJ1pqwDjFsWG8aL5_OvrvPUw");'>
+<a class="group relative aspect-video sm:aspect-auto sm:h-48 lg:h-56 overflow-hidden rounded-lg shadow-lg" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Office workspace desk view" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBSj6tc15HvkGVzdSE4B0EywOLLM-hc1zTkUlsveRNQhMOVzZUshRo_rYwLow75i1AWeIMvY9ub05IUrcr8Re6DFvb-vea5JMIwAQPKhfnMXsGqsMSThw5QIycg16WkfGNbJ8PSzCHedHi3YaCTcTo30439bc8GnVXvAnGkbvzKzj42I-4zQnqUTm5vILsLfzs_UjF3teoaDGAtCi59lQCwn_DZxNM4rT9T3BU7VzNBYhnfvTuYOwJuP_CA5P8217R1Nt9duutwOD9a');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-4">
+<span class="inline-block px-2 py-0.5 mb-2 text-[10px] font-bold text-white bg-blue-600 rounded uppercase tracking-wide">Thủ Thuật</span>
+<h3 class="text-white text-sm md:text-base font-bold leading-tight line-clamp-2 group-hover:text-primary transition-colors">Hướng dẫn Tối ưu Hóa Office 365 Để Làm Việc Hiệu Quả</h3>
 </div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+</a>
 </div>
-<div>
-<h3 class="text-sm font-bold leading-snug line-clamp-2">How to Fix Common BSOD Errors instantly</h3>
-<p class="text-text-secondary text-xs mt-1">2 days ago</p>
+</section>
+<!-- Main Layout: Content + Sidebar -->
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- LEFT COLUMN: Main Content (70%) -->
+<div class="w-full lg:w-[70%] flex flex-col gap-10">
+<!-- Category Section: WINDOWS OS -->
+<section>
+<div class="flex items-center justify-between mb-5 border-l-4 border-primary pl-4">
+<h2 class="text-2xl font-bold text-white uppercase tracking-tight">WINDOWS OS</h2>
+<a class="text-xs text-text-secondary hover:text-primary font-semibold uppercase flex items-center gap-1" href="#">
+                            Xem thêm <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
 </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Big Featured Article -->
+<article class="group md:row-span-4 bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="aspect-video overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Laptop screen showing windows desktop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkfW44RbTVvPGJ-FsaUIiWYXPYvzrOOPWMe4OL7qRdiw7S6UHZBbPGalLabL23ZhG5a7yXF2znPVqJP-AFDGZ39WYsBQEaGdbSscW1xYtl5QJi5QOGOPphhjyyqNucvM9TAIqygjD--qB9UIvh5HH_l2gIdoKztSKVU8jOI-XTs1FXXYHqaqFt1Iw_n4wgCNr9_WY_47jc6n1tITPjuaARwnOBD89BVospdCPw2_IAVXYxAIvHgCLDYFhoHrObltzKn9RTsq_AOa4e"/>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<h3 class="text-xl font-bold leading-tight text-white group-hover:text-primary transition-colors">
+<a href="#">Tổng hợp các bản Windows 10/11 ổn định nhất cho dân văn phòng</a>
+</h3>
+<div class="text-xs text-text-secondary flex gap-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> 12/10/2023</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> Admin</span>
+</div>
+<p class="text-sm text-gray-400 line-clamp-3">
+                                    Bạn đang tìm kiếm một bản Windows ổn định, ít lỗi vặt để phục vụ công việc văn phòng? Bài viết này sẽ tổng hợp và đánh giá chi tiết các phiên bản...
+                                </p>
+</div>
+</article>
+<!-- Small List Items -->
+<div class="flex flex-col gap-4">
+<!-- List Item 1 -->
+<article class="flex gap-4 group cursor-pointer bg-surface-dark/50 hover:bg-surface-dark p-2 rounded-lg transition-colors">
+<div class="w-24 h-16 shrink-0 rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Computer screen close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-5GHXsa1ByBQgA7RNZVD3NDjYSikZgtxxR6OQTiPt8BPL6-T2c-RBKjC1I-D6O9zWWT1t11iZ1CC48nPzjU9m5NtrIjMSBO9Iy7ttNtYABaL56v8b8uyGHTs7YmZcKcPKA4lClQvc-Z5yWxqPrSXBAc2qHS7NI9yoX-D4bT69R11q_RrV9EAo_RViSZhQetW6g2T-1PnWyNLRgFvZUNkCP0DXRal4R_SFgkP8yXjuR7RQ_AvRbVyYFpKdMsbGD2fzf_5gOvj8mGAN"/>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="text-sm font-semibold text-white group-hover:text-primary transition-colors line-clamp-2">Cách tải ISO Windows 11 từ trang chủ Microsoft không cần TPM 2.0</h4>
+<span class="text-xs text-text-secondary mt-1">10/10/2023</span>
+</div>
+</article>
+<!-- List Item 2 -->
+<article class="flex gap-4 group cursor-pointer bg-surface-dark/50 hover:bg-surface-dark p-2 rounded-lg transition-colors">
+<div class="w-24 h-16 shrink-0 rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Generic technology background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVUMjcMxZjfzrXq8_Hsam8ZfKIhC_8lUN38Wh8x-fFZLSd8wD0Z3KogfO4Iium8BZAdn_oXOGhQ800-BmB0ql_z9dhotDCAZRCfRJHPtEKJuxEpGvt36Vet7_nXO4BsELB6Azna7fn7WvAphxC6xKGgBS-KJ7Fg49PdJu-o-Em-FxUw82tEzjBjhwIMpG4liQEbpnicTKpQTehM9M4xsgnoNFPxtZwamNOFJKJfT3xlBIxfof4X-BWUnrxYjPuZerxbWjPAjctdfRN"/>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="text-sm font-semibold text-white group-hover:text-primary transition-colors line-clamp-2">Khắc phục lỗi màn hình xanh "INACCESSIBLE BOOT DEVICE"</h4>
+<span class="text-xs text-text-secondary mt-1">08/10/2023</span>
+</div>
+</article>
+<!-- List Item 3 -->
+<article class="flex gap-4 group cursor-pointer bg-surface-dark/50 hover:bg-surface-dark p-2 rounded-lg transition-colors">
+<div class="w-24 h-16 shrink-0 rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Windows update screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD19BGErxAAq5FrMvSqhxX69kQj9JHuxD3qXgbZpLkSxg3H1DO_2ukhPLyQ9ZK4BRZeCDdS-MTJAbP1J0i3b4YjJdd--KX2nEpz9kZuzis0TKgzLnHDevQbEX19vpuV-dCzh5abr3EROKaMOyOJW312dDzmZf0ZOkAeIwj1rSPn647gT3GN427GC7aZyEe2jHPUPmY6GD5fIsRAnNCAXxFH3WtUOgt1zSQMtafiNzbegPu0r1IQj5y-8FYdJf4v5t_892mimay7w8EH"/>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="text-sm font-semibold text-white group-hover:text-primary transition-colors line-clamp-2">Windows 10 21H2 sắp ngừng hỗ trợ, bạn cần làm gì?</h4>
+<span class="text-xs text-text-secondary mt-1">05/10/2023</span>
+</div>
+</article>
+<!-- List Item 4 -->
+<article class="flex gap-4 group cursor-pointer bg-surface-dark/50 hover:bg-surface-dark p-2 rounded-lg transition-colors">
+<div class="w-24 h-16 shrink-0 rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Computer code on screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALamdT-E4TE-9tVvB338pnOD_6n-0se8l0ljDCbRU40SKspAHZ0qtxsLyHudawUd6uGcmgCSzSLaiuzjmOq3W-VzazAa8_yY1LGoUvFvdXkG2jipUuEegwoMP5wBF_z07as7VSwTQtnzJS3Sx1R89OSqeM1SXaeVJYmjtylkrp1VvWEWQK30ZF2ZGMRWM2KXivAqybgPygV9wrcuhJvAJwpeT6M6bD3Bn_h0k6J8ohUWZR8TxIDS6ILcGyAuOTwdF7TGi3gafIn3qw"/>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="text-sm font-semibold text-white group-hover:text-primary transition-colors line-clamp-2">Review Windows 12 Concept: Giao diện như macOS?</h4>
+<span class="text-xs text-text-secondary mt-1">01/10/2023</span>
+</div>
+</article>
 </div>
 </div>
 </section>
-<!-- Divider -->
-<div class="h-2 bg-transparent"></div>
-<!-- Category: WINDOWS OS -->
-<section class="w-full py-6">
-<div class="flex items-center justify-between px-4 mb-3">
-<h3 class="text-primary text-sm font-bold uppercase tracking-wider">WINDOWS OS</h3>
-<a class="text-gray-500 dark:text-gray-400 text-xs font-medium flex items-center hover:text-primary transition-colors" href="#">
-                    View All <span class="material-symbols-outlined text-[16px] ml-0.5">chevron_right</span>
+<!-- Category Section: GHOST WINDOWS -->
+<section>
+<div class="flex items-center justify-between mb-5 border-l-4 border-primary pl-4">
+<h2 class="text-2xl font-bold text-white uppercase tracking-tight">GHOST WINDOWS</h2>
+<a class="text-xs text-text-secondary hover:text-primary font-semibold uppercase flex items-center gap-1" href="#">
+                            Xem thêm <span class="material-symbols-outlined text-sm">arrow_forward</span>
 </a>
 </div>
-<!-- Hero Card -->
-<div class="px-4 mb-4">
-<div class="flex flex-col rounded-xl overflow-hidden shadow-lg bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5">
-<div class="w-full aspect-video bg-cover bg-center" data-alt="Windows 11 desktop screenshot with start menu open" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAc_fjV87dK4GxVYVRtLlESf9k4PHk1Kx3z9XIgrht34PfBofug4mAiCrh7ZrUhLVZbdzLkdRDi83GVivPYE0F1xH5Y6wSTbwLxylbNmui9VYcYCVfoahD4vwNOJe9QrMquAbd3ilY6EYhfpM6FhhZ9f7ifow3frAAJeH6K-dwXy0l4AIOKr7nX6MfRNPpUogLh-Iy1lo4XifyIjZcXYM8pMeTmZg7hglPU2aAjfkccvPhTm1cII3m0CT8i0nTHhSjo97gcVByuq-E");'>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Big Featured Article (Alternate Layout: Right side in desktop if wanted, kept consistent for now) -->
+<article class="group md:row-span-4 bg-surface-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="aspect-video overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Laptop keyboard with colorful lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu2E-FlDyszF8xBRqvo85FpWtgepWbC9Ngc0bPSH4EtM5hjdkTBTsY2XVFuzjphFADniIT_4X6PCMFYRXJj338TwgOIgMJpRUWU46HJN5k0ldOZm7M3MB6k3gbMNRpzvHRG1rHIAzJUdhI_vcurBtSM-aNwlLmqYWHBHE_o64m8MLhkZXg6s0ykFqF4wsQPDyOsT2oJfjRFMT3uOxr1bPrwfrw8-2FjspA7-wvvGqCSogkiml8YgFKpgGwM0lE_EFKyZRgmDGsGzpa"/>
+</div>
+<div class="p-5 flex flex-col gap-3">
+<h3 class="text-xl font-bold leading-tight text-white group-hover:text-primary transition-colors">
+<a href="#">Ghost Win 11 Pro 23H2 Full Soft - Tự động nhận Driver mới nhất 2024</a>
+</h3>
+<div class="text-xs text-text-secondary flex gap-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> 15/10/2023</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">person</span> NHUIT Team</span>
+</div>
+<p class="text-sm text-gray-400 line-clamp-3">
+                                    Bản Ghost được tinh chỉnh mượt mà, loại bỏ các app rác, tích hợp Office 2021 bản quyền vĩnh viễn và bộ font tiếng Việt đầy đủ...
+                                </p>
+</div>
+</article>
+<!-- Small List Items -->
+<div class="flex flex-col gap-4">
+<article class="flex gap-4 group cursor-pointer bg-surface-dark/50 hover:bg-surface-dark p-2 rounded-lg transition-colors">
+<div class="w-24 h-16 shrink-0 rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Technology abstract light lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGqjgiIU1C6XBSDovdin0D3qz2mWfiw9czxlScQji9PdWja3tqYWiRpWMpZxIToUV9neIP9mK-6__4QDQH6TRCgOzW3Y0-Jw9b5Ct0vId8YpfK7Ih7DOyZkyAKhC_hTXatJRh6gz2tinNkBFXDONrcJubFd1c37GKAuQei0wNTNT5sv9sPrmPFrPbGCsO6MecPhn0uExqReKYnkD0RxctaR9OAHl49ivE2piE2aygqwyeCasELoqg5wNQ0nuO7MZ9uHU1F_O2DP-Kf"/>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="text-sm font-semibold text-white group-hover:text-primary transition-colors line-clamp-2">Ghost Win 7 Ultimate 64bit Nguyên Gốc - Ổn định nhất</h4>
+<span class="text-xs text-text-secondary mt-1">11/09/2023</span>
+</div>
+</article>
+<article class="flex gap-4 group cursor-pointer bg-surface-dark/50 hover:bg-surface-dark p-2 rounded-lg transition-colors">
+<div class="w-24 h-16 shrink-0 rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Abstract data connections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEFr-hsDlHCiICy1kKEZcl3mBcbm2OcJxVrZIz0c47b5f1QlgTa7eECMXORQDWqFq4tJq29cfZBJV3AUCx_SIUuojwXfPZ3QiJtGQ9vxhV98fZYUgeNRmSs_9EDTQl0idFfo6RQMo_q7g9V8mgzDi4sF-jQHL5LeRbH9yn1HIoKeaCy-IwsjU8jtrb1uwYXfGcR_l7vOyW6ojRfGcURgaSjOQrLCoZKTXZHGilQu2xKlhHrcDi1reJ5qVlk77dmrJb4eUrGZNMe_jA"/>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="text-sm font-semibold text-white group-hover:text-primary transition-colors line-clamp-2">Download Ghost Win 10 LTSC 2021 Nhẹ Mượt Cho Máy Cấu Hình Thấp</h4>
+<span class="text-xs text-text-secondary mt-1">02/09/2023</span>
+</div>
+</article>
+<article class="flex gap-4 group cursor-pointer bg-surface-dark/50 hover:bg-surface-dark p-2 rounded-lg transition-colors">
+<div class="w-24 h-16 shrink-0 rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Cyber security concept lock" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbCa0tNG2nwrMXi7R3e5KayXjO0MKg3YWavhq0Wqbri_-H89ECNvgYnNTji53gnS1pZjkug1K6dDSsm2NHhLS8zJgmvyCo6jrSSHbqkyMq2qrdaJk94oSALEIS2efSFcyp9rhLuGgp99U_xgj-KUQa0Y4hIybI0M9LiQa7Rh-1y8c8_4vzRcmW4de_G3vHCkdCm-13oAhVcTvMoZ09DoNhUUDMXoaqfqQ9WvsTXYyesnFCOr1lJrudI4MyS-xHZD4aATw-ARMsxb8K"/>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="text-sm font-semibold text-white group-hover:text-primary transition-colors line-clamp-2">Hướng dẫn bung Ghost chuẩn UEFI &amp; Legacy bằng OneKey Ghost</h4>
+<span class="text-xs text-text-secondary mt-1">20/08/2023</span>
+</div>
+</article>
+<article class="flex gap-4 group cursor-pointer bg-surface-dark/50 hover:bg-surface-dark p-2 rounded-lg transition-colors">
+<div class="w-24 h-16 shrink-0 rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Server room lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-Wo96FuwTR1CM5vAg7k6UUKT-U4ik6YDughFKo8S-qNE-OgOrpPCMyvLxb3XEU5wChQLUU1MAOAOFttT4cSKxoXZ4Wn32EwZg6S-hND521A0h3KtkoOLC-bS_xxqTujVuQ-TWonrWaQHs9BlbLdg38HjnKEIUcnXo3qgD8pQA5AMyRStvl-gUHtPKsXHknLAS66m2hbyFYfvgPFzdyzuUM6h1ax0BFUJWZIr09P3dkCI3mWMh5ccDC4G6YFwuUbmO3aQ2n2h41F0f"/>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="text-sm font-semibold text-white group-hover:text-primary transition-colors line-clamp-2">Tổng hợp bộ Driver Offline WanDriver mới nhất cho mọi Windows</h4>
+<span class="text-xs text-text-secondary mt-1">15/08/2023</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Category Section: PHẦN MỀM -->
+<section>
+<div class="flex items-center justify-between mb-5 border-l-4 border-primary pl-4">
+<h2 class="text-2xl font-bold text-white uppercase tracking-tight">PHẦN MỀM</h2>
+<a class="text-xs text-text-secondary hover:text-primary font-semibold uppercase flex items-center gap-1" href="#">
+                            Xem thêm <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+<article class="bg-surface-dark rounded-lg overflow-hidden group">
+<div class="aspect-video overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Abstract nature landscape background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL1nB8xueNlPw0hwIPYTkkYn-NLSAGDJdCyHXBUOvsg59VH2rSpiwQpB1bOppTcjsv_J-tTo6eVuZ3Bp626mJnaHzRFr4-EKh08fD_Ad356TURVZEUZnJ9vRN14CaOxfDXNJuOQjN5PqW2dQhErKKd2JDWbtcGh_J6Hx44JVewTEvjgZQaz6FQeK9F6b3SJ3YKz5VlXstWbOsPQJkvqqytLvZo15SL80AFepCOeKOzQqF6m5_zfRE8qlt1cY3IISj5mwfsedzccQnZ"/>
 </div>
 <div class="p-4">
-<span class="inline-block py-1 px-2 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase mb-2">Tutorial</span>
-<h4 class="text-lg font-bold leading-tight mb-2">Download Windows 10 22H2 Original ISO from Microsoft</h4>
-<p class="text-gray-500 dark:text-text-secondary text-sm line-clamp-2 mb-3">A detailed step-by-step guide on how to get the latest official ISO directly from the source without any third-party tools.</p>
-<div class="flex items-center justify-between">
-<span class="text-xs text-gray-400">By Admin • 4 hours ago</span>
-<span class="material-symbols-outlined text-primary text-xl">arrow_circle_right</span>
-</div>
-</div>
-</div>
-</div>
-<!-- List Items -->
-<div class="px-4 flex flex-col gap-4">
-<article class="flex gap-3 items-start group">
-<div class="w-24 h-24 shrink-0 rounded-lg bg-cover bg-center" data-alt="Close up of USB flash drive plugged into laptop" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDB-7elcDSFbDUtIE-mIKNsRcdfOkCP5-I6GYiXoQ8yUrFy_zizzOGbecPhMefes1PqYPWE4eBM2fdKOukGZbB-7ACue9w0Z5goP2_EKZIA5AebYO6btmbNBOo5DIPwGQ3PTPwRH3HpoUEgKxoNzTV7HAkhkKskV187fTAgiABZRAfZJSPZ7nSEPBD8AvubbEs3LrrHeI1PEHUgTgskzhB7nyGIT3Dd9tm0NFJL8aGMycsyOwpzydk9-FfXLRLHVC3lAijmWi0rzqE");'></div>
-<div class="flex flex-col justify-center h-24 border-b border-gray-200 dark:border-white/5 w-full pr-2 group-last:border-0">
-<h5 class="font-semibold text-sm leading-snug mb-1 line-clamp-2 group-hover:text-primary transition-colors">How to create a bootable USB for Windows 11 installation</h5>
-<p class="text-xs text-gray-500 dark:text-gray-400">Oct 24, 2023</p>
+<h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition-colors">Adobe Photoshop 2024 Full Crack - Link Google Drive</h3>
+<p class="text-xs text-text-secondary">Cập nhật tính năng AI Generative Fill mới nhất, hướng dẫn cài đặt chi tiết...</p>
 </div>
 </article>
-<article class="flex gap-3 items-start group">
-<div class="w-24 h-24 shrink-0 rounded-lg bg-cover bg-center" data-alt="Laptop screen showing command prompt terminal" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHZ_8QJaXLnmcqKQx8benIe06r5mBoOMmQMl9_F2_XjwQBXo_TxDOIWnGyDMlCM5-ejIm9wI0FTSR9Zn-eqgW0qjl0uNdzct1sG1u1KZ2Q33p-I8GnFuO0uxHz1o5Z4c-d52JhqUHYTHoRtKz8yyPRPtuqhAr1xBxhfSoy_DTb88iWV1u9JHsN-kQQ1n0ZXnQZOGiDV90NsPjwGXsK5pNf1QqvbtxzVmm85RgdwXzYiWbLTm4uoKwhv7nLgUhnTGzO2J1qALRdEN8");'></div>
-<div class="flex flex-col justify-center h-24 border-b border-gray-200 dark:border-white/5 w-full pr-2 group-last:border-0">
-<h5 class="font-semibold text-sm leading-snug mb-1 line-clamp-2 group-hover:text-primary transition-colors">Remove Bloatware from Windows 10 with this simple script</h5>
-<p class="text-xs text-gray-500 dark:text-gray-400">Oct 20, 2023</p>
+<article class="bg-surface-dark rounded-lg overflow-hidden group">
+<div class="aspect-video overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Microsoft Office icons concept" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi_0a0yzC4GxaCZvfshVB8DAZc06KiVJww-n012utjbbqTj_4498d0qgCFjNJMxa_1jj1qFCmj-2STKjm-lQipSsfH_CB_4jIzVEdHElwnkfHA8b5LDaXxhz8o5cvGipzoo6hhKhDouZ202CuhRd-ByEDUHvijOS3Rvr9x3u2yexzAmuQ-Qn-oSDPA63Hzzr69lCi2EiCNVovrp0BQceUp9IzFFCWFCM4ut2bORKMz1-rp6vl4X8mvxWYfbvG8fGTYKfEr0m-atj-Y"/>
+</div>
+<div class="p-4">
+<h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition-colors">Office 2021 Professional Plus - Key Kích Hoạt Vĩnh Viễn</h3>
+<p class="text-xs text-text-secondary">Bộ công cụ văn phòng mạnh mẽ nhất của Microsoft, hỗ trợ giao diện tối...</p>
 </div>
 </article>
-<article class="flex gap-3 items-start group">
-<div class="w-24 h-24 shrink-0 rounded-lg bg-cover bg-center" data-alt="Settings menu icon on dark background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTTMoJXDScJw2tbIhn1mXLV1lB5Pgya5epfy_zI-Lj7gsdsbdqw_yDXdwNrXH_nWcyoL2-QlnRhXJVB52QglP7sXeYrJPbZSEkgo1kEOKlK2UxK9cBZjKc5ld_BP7D9cCiGSOoBLhNEAz3E7B8gxyTTtqyqBjxIFMiIa4_Q8J-2tj1DjSJw4LpiLwQUtJcV65Y0ibWPjt0sUVXlXkFKoXSdWU8Sdj4RPlxV0yus5MmmEK5_S-_ZibiEbo2cE5baLywctjBiKGDO4g");'></div>
-<div class="flex flex-col justify-center h-24 border-b border-gray-200 dark:border-white/5 w-full pr-2 group-last:border-0">
-<h5 class="font-semibold text-sm leading-snug mb-1 line-clamp-2 group-hover:text-primary transition-colors">Optimizing Windows Registry for better gaming performance</h5>
-<p class="text-xs text-gray-500 dark:text-gray-400">Oct 18, 2023</p>
+<article class="bg-surface-dark rounded-lg overflow-hidden group">
+<div class="aspect-video overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Video editing timeline concept" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBPeZrRl6_dh3uMZRSI6q207Fd2Bz6byiGwKHPHZ8CJt6Ae5p4IuJSNVgRVz5Vg5VucrJCLyxywE3R75_xoD1VZjz3iX5TrCufPGCDQ5DJVesuxYKNlTb9baG4A4MU93xL6WJH5dw3gqgx6zbIqGoLC9OaUr-TXL3I686DByMKGNSkvM92L67z_jL42U9GV29MotdQEPFOmI1nmFXp8PZA3jV25qe-HZthQa5Uk_0AlXby2NIOWSVVjA1LGt5ktyBSFAcxwZTqMc90"/>
+</div>
+<div class="p-4">
+<h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition-colors">Camtasia Studio 2023 - Phần mềm quay màn hình tốt nhất</h3>
+<p class="text-xs text-text-secondary">Chỉnh sửa video đơn giản, xuất video 4k, nhiều hiệu ứng transition đẹp mắt...</p>
 </div>
 </article>
 </div>
 </section>
-<!-- Category: GHOST WINDOWS (Horizontal Scroll) -->
-<section class="w-full py-6 bg-gray-100 dark:bg-[#1a0b0b]">
-<div class="flex items-center justify-between px-4 mb-4">
-<h3 class="text-primary text-sm font-bold uppercase tracking-wider">GHOST WINDOWS</h3>
-<a class="text-gray-500 dark:text-gray-400 text-xs font-medium flex items-center hover:text-primary transition-colors" href="#">
-                    View All <span class="material-symbols-outlined text-[16px] ml-0.5">chevron_right</span>
+</div>
+<!-- RIGHT COLUMN: Sidebar (30%) -->
+<aside class="w-full lg:w-[30%] flex flex-col gap-8">
+<!-- Social / Contact Widget -->
+<div class="bg-surface-dark rounded-xl p-5 border border-white/5">
+<h3 class="text-lg font-bold text-white mb-4 border-b border-white/10 pb-2">HỖ TRỢ TRỰC TUYẾN</h3>
+<div class="flex flex-col gap-3">
+<a class="flex items-center gap-3 p-3 rounded-lg bg-[#0068FF]/10 text-[#0068FF] hover:bg-[#0068FF] hover:text-white transition-all group" href="#">
+<div class="size-8 rounded-full bg-current flex items-center justify-center text-white">
+<span class="font-bold text-xs">Z</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">Chat Zalo</span>
+<span class="text-xs opacity-80">Hỗ trợ 24/7</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg bg-[#229ED9]/10 text-[#229ED9] hover:bg-[#229ED9] hover:text-white transition-all group" href="#">
+<div class="size-8 rounded-full bg-current flex items-center justify-center text-white">
+<i class="fa-brands fa-telegram text-xs"></i>
+<span class="material-symbols-outlined text-sm">send</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">Telegram</span>
+<span class="text-xs opacity-80">Nhóm thảo luận</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all group" href="#">
+<div class="size-8 rounded-full bg-current flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">call</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">WhatsApp</span>
+<span class="text-xs opacity-80">Contact Admin</span>
+</div>
+<span class="material-symbols-outlined ml-auto text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </a>
 </div>
-<div class="flex overflow-x-auto gap-4 px-4 pb-4 no-scrollbar snap-x snap-mandatory">
-<!-- Card 1 -->
-<div class="snap-center shrink-0 w-[280px] bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-white/5">
-<div class="aspect-video bg-cover bg-center relative" data-alt="Abstract colorful ghost swirl background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUrHmaOFVYckBAbSBJVLlSnTWSQq1Chct7uHVyiTptgrYzL-aBU49k9vrtihY9NRHR-0xygtxKsUiN53-WAj97-CKkZd6Y0bwj9m_2I_O_RGWAKK4QlULKDlvFP8f5QoknvoTOvvD8uu9i6ONEhMN_34ezhNhN7TUJ3_b18nexuRqaHMvZ1KwRprd1rWtGQe8RkV_bQ3zryk_XxoMWQ93k2ik1XDaCkcSBhzpB3yL0n-zSmyZP5q5_MIpdakgWFOE5bI03ltAcPks");'>
-<span class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded">v2.0</span>
 </div>
-<div class="p-3">
-<h4 class="font-bold text-sm leading-snug mb-1 line-clamp-2">Ghost Win 11 22H2 No Soft Full Driver</h4>
-<div class="flex items-center gap-2 mt-2">
-<span class="material-symbols-outlined text-base text-gray-400">download</span>
-<span class="text-xs text-gray-500 dark:text-gray-400">12.5k Downloads</span>
+<!-- Tabs Widget -->
+<div class="bg-surface-dark rounded-xl overflow-hidden border border-white/5">
+<!-- Tab Headers -->
+<div class="flex border-b border-white/10">
+<button class="flex-1 py-3 text-sm font-bold text-primary border-b-2 border-primary bg-white/5">MỚI NHẤT</button>
+<button class="flex-1 py-3 text-sm font-bold text-gray-400 hover:text-white hover:bg-white/5 transition-colors">HOT NHẤT</button>
+<button class="flex-1 py-3 text-sm font-bold text-gray-400 hover:text-white hover:bg-white/5 transition-colors">DEALS</button>
 </div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="snap-center shrink-0 w-[280px] bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-white/5">
-<div class="aspect-video bg-cover bg-center relative" data-alt="Dark abstract geometric background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0JY6d9gYKi5gD3YWjKFgJWurD2v6QlVlI0Es92RskUVldsjZ_xEkGjWzJMSsyisj2fOuPasoGlHbrnmPWQMjQ94hmrdZl1D0cBQYy6Vw5HD5oxs2D5hqR_eZLplN2ZDEPp6K4E7M8QVqSSQ07EHvxoKbAVmf-cwE3klfybFsRw0igRQGAH5MtnGZ68-IlhTqfHso3PfYmY9OY2mln8I2t3KT5IAlN7Zcb_O9zlFVVpbo_LLwkzr0-KbNVAbSgY_JRH-NLlixvNYI");'>
-<span class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded">Lite</span>
-</div>
-<div class="p-3">
-<h4 class="font-bold text-sm leading-snug mb-1 line-clamp-2">Ghost Win 10 Super Lite for Gaming 2024</h4>
-<div class="flex items-center gap-2 mt-2">
-<span class="material-symbols-outlined text-base text-gray-400">download</span>
-<span class="text-xs text-gray-500 dark:text-gray-400">8.2k Downloads</span>
-</div>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="snap-center shrink-0 w-[280px] bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-white/5">
-<div class="aspect-video bg-cover bg-center relative" data-alt="Blue motherboard circuit detail macro" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBqH_ROqUQtUlwAHlmDVu9MHMjHSp_SEFhSJrFw34-VGkWWWdqEKhBzQ_NUVhVhKX8OmQP_qhIPDDbBlhtOwbB9Ng8aQRXImS9GcU92P9WYe1pbla7jgipLW-o0NAvuKWx85ICwoYL3M8O6ru_SEFD13GNl_r9iQlDW_YtiGoRcke10go78hD4husEt7-W_F6aY8iuAawQyY2rJLiY6Z4Tfx1xGmuYizF-hcUqAomua-HzLIiq5DF7AwGl00BytheVKvIpkJdNA54o");'>
-<span class="absolute top-2 right-2 bg-black/60 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded">Full</span>
-</div>
-<div class="p-3">
-<h4 class="font-bold text-sm leading-snug mb-1 line-clamp-2">Ghost Win 7 Ultimate 64bit Smooth &amp; Stable</h4>
-<div class="flex items-center gap-2 mt-2">
-<span class="material-symbols-outlined text-base text-gray-400">download</span>
-<span class="text-xs text-gray-500 dark:text-gray-400">5.1k Downloads</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Category: PHẦN MỀM (SOFTWARE) -->
-<section class="w-full py-6">
-<div class="flex items-center justify-between px-4 mb-4">
-<h3 class="text-primary text-sm font-bold uppercase tracking-wider">PHẦN MỀM</h3>
-</div>
-<div class="grid grid-cols-2 gap-3 px-4">
-<div class="bg-white dark:bg-surface-dark p-3 rounded-lg flex items-center gap-3 border border-gray-200 dark:border-white/5 shadow-sm">
-<div class="size-10 rounded-lg bg-blue-600 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-white">description</span>
-</div>
+<!-- Tab Content (Showing 'Mới Nhất' only for this static view) -->
+<div class="p-4 flex flex-col gap-4">
+<a class="flex gap-3 group" href="#">
+<span class="text-2xl font-black text-white/10 group-hover:text-primary/50 transition-colors">01</span>
 <div>
-<h4 class="text-sm font-bold">Office 2021</h4>
-<p class="text-[10px] text-gray-500 uppercase">Productivity</p>
+<h4 class="text-sm font-medium text-white group-hover:text-primary transition-colors line-clamp-2">Key Windows 11 Pro bản quyền giá rẻ chỉ 99k</h4>
 </div>
-</div>
-<div class="bg-white dark:bg-surface-dark p-3 rounded-lg flex items-center gap-3 border border-gray-200 dark:border-white/5 shadow-sm">
-<div class="size-10 rounded-lg bg-orange-600 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-white">video_library</span>
-</div>
-<div>
-<h4 class="text-sm font-bold">VLC Player</h4>
-<p class="text-[10px] text-gray-500 uppercase">Multimedia</p>
-</div>
-</div>
-<div class="bg-white dark:bg-surface-dark p-3 rounded-lg flex items-center gap-3 border border-gray-200 dark:border-white/5 shadow-sm">
-<div class="size-10 rounded-lg bg-green-600 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-white">security</span>
-</div>
-<div>
-<h4 class="text-sm font-bold">Kaspersky</h4>
-<p class="text-[10px] text-gray-500 uppercase">Security</p>
-</div>
-</div>
-<div class="bg-white dark:bg-surface-dark p-3 rounded-lg flex items-center gap-3 border border-gray-200 dark:border-white/5 shadow-sm">
-<div class="size-10 rounded-lg bg-purple-600 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-white">brush</span>
-</div>
-<div>
-<h4 class="text-sm font-bold">Photoshop</h4>
-<p class="text-[10px] text-gray-500 uppercase">Design</p>
-</div>
-</div>
-</div>
-<div class="px-4 mt-4">
-<button class="w-full py-3 text-sm font-medium text-center text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-surface-dark rounded-lg hover:bg-gray-200 dark:hover:bg-white/10 transition-colors">
-                    View More Software
-                </button>
-</div>
-</section>
-<!-- Category: THỦ THUẬT (TIPS) -->
-<section class="w-full py-6 pb-8">
-<div class="flex items-center justify-between px-4 mb-4">
-<h3 class="text-primary text-sm font-bold uppercase tracking-wider">THỦ THUẬT</h3>
-</div>
-<div class="px-4 flex flex-col gap-2">
-<a class="flex items-center justify-between p-3 rounded-lg bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/5 hover:border-primary/50 transition-colors group" href="#">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">tips_and_updates</span>
-<span class="text-sm font-medium group-hover:text-primary transition-colors">How to extend laptop battery life</span>
-</div>
-<span class="material-symbols-outlined text-gray-400 text-lg">chevron_right</span>
 </a>
-<a class="flex items-center justify-between p-3 rounded-lg bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/5 hover:border-primary/50 transition-colors group" href="#">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">wifi</span>
-<span class="text-sm font-medium group-hover:text-primary transition-colors">Fix WiFi connection issues</span>
+<a class="flex gap-3 group" href="#">
+<span class="text-2xl font-black text-white/10 group-hover:text-primary/50 transition-colors">02</span>
+<div>
+<h4 class="text-sm font-medium text-white group-hover:text-primary transition-colors line-clamp-2">Chia sẻ tài khoản ChatGPT Plus miễn phí tháng 10/2023</h4>
 </div>
-<span class="material-symbols-outlined text-gray-400 text-lg">chevron_right</span>
 </a>
-<a class="flex items-center justify-between p-3 rounded-lg bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/5 hover:border-primary/50 transition-colors group" href="#">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">speed</span>
-<span class="text-sm font-medium group-hover:text-primary transition-colors">Speed up your PC in 5 minutes</span>
+<a class="flex gap-3 group" href="#">
+<span class="text-2xl font-black text-white/10 group-hover:text-primary/50 transition-colors">03</span>
+<div>
+<h4 class="text-sm font-medium text-white group-hover:text-primary transition-colors line-clamp-2">Lỗi máy in không nhận lệnh in trong Win 11 23H2</h4>
 </div>
-<span class="material-symbols-outlined text-gray-400 text-lg">chevron_right</span>
+</a>
+<a class="flex gap-3 group" href="#">
+<span class="text-2xl font-black text-white/10 group-hover:text-primary/50 transition-colors">04</span>
+<div>
+<h4 class="text-sm font-medium text-white group-hover:text-primary transition-colors line-clamp-2">Cách chặn quảng cáo Youtube trên Chrome hiệu quả 100%</h4>
+</div>
+</a>
+<a class="flex gap-3 group" href="#">
+<span class="text-2xl font-black text-white/10 group-hover:text-primary/50 transition-colors">05</span>
+<div>
+<h4 class="text-sm font-medium text-white group-hover:text-primary transition-colors line-clamp-2">Download IDM 6.41 Build 18 Full Crack mới nhất - Không bị Fake Serial</h4>
+</div>
 </a>
 </div>
-</section>
-<!-- Bottom Navigation -->
-<nav class="fixed bottom-0 w-full bg-white dark:bg-[#1a0b0b] border-t border-gray-200 dark:border-white/5 flex justify-around items-end pb-6 pt-3 z-50 shadow-[0_-5px_15px_rgba(0,0,0,0.2)]">
-<button class="flex flex-col items-center gap-1 w-16 group">
-<span class="material-symbols-outlined text-primary transition-colors">home</span>
-<span class="text-[10px] font-medium text-primary">Home</span>
-</button>
-<button class="flex flex-col items-center gap-1 w-16 group">
-<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">grid_view</span>
-<span class="text-[10px] font-medium text-gray-500 group-hover:text-primary transition-colors">Categories</span>
-</button>
-<button class="flex flex-col items-center gap-1 w-16 group">
-<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">bookmark</span>
-<span class="text-[10px] font-medium text-gray-500 group-hover:text-primary transition-colors">Saved</span>
-</button>
-<button class="flex flex-col items-center gap-1 w-16 group">
-<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">person</span>
-<span class="text-[10px] font-medium text-gray-500 group-hover:text-primary transition-colors">Profile</span>
-</button>
-</nav>
 </div>
+<!-- Categories Widget -->
+<div class="bg-surface-dark rounded-xl p-5 border border-white/5">
+<h3 class="text-lg font-bold text-white mb-4 border-b border-white/10 pb-2">CHUYÊN MỤC</h3>
+<ul class="flex flex-col gap-2">
+<li>
+<a class="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-white/5 text-gray-300 hover:text-primary transition-colors group" href="#">
+<span class="text-sm font-medium">Thủ Thuật Máy Tính</span>
+<span class="bg-white/10 text-xs px-2 py-0.5 rounded-full text-gray-400 group-hover:bg-primary/20 group-hover:text-primary transition-colors">245</span>
+</a>
+</li>
+<li>
+<a class="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-white/5 text-gray-300 hover:text-primary transition-colors group" href="#">
+<span class="text-sm font-medium">Windows ISO</span>
+<span class="bg-white/10 text-xs px-2 py-0.5 rounded-full text-gray-400 group-hover:bg-primary/20 group-hover:text-primary transition-colors">120</span>
+</a>
+</li>
+<li>
+<a class="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-white/5 text-gray-300 hover:text-primary transition-colors group" href="#">
+<span class="text-sm font-medium">Ghost Win</span>
+<span class="bg-white/10 text-xs px-2 py-0.5 rounded-full text-gray-400 group-hover:bg-primary/20 group-hover:text-primary transition-colors">86</span>
+</a>
+</li>
+<li>
+<a class="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-white/5 text-gray-300 hover:text-primary transition-colors group" href="#">
+<span class="text-sm font-medium">Phần Mềm</span>
+<span class="bg-white/10 text-xs px-2 py-0.5 rounded-full text-gray-400 group-hover:bg-primary/20 group-hover:text-primary transition-colors">312</span>
+</a>
+</li>
+<li>
+<a class="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-white/5 text-gray-300 hover:text-primary transition-colors group" href="#">
+<span class="text-sm font-medium">Office Tools</span>
+<span class="bg-white/10 text-xs px-2 py-0.5 rounded-full text-gray-400 group-hover:bg-primary/20 group-hover:text-primary transition-colors">54</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Ads/Banner Placeholder -->
+<div class="rounded-xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center relative border border-white/5">
+<div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+<div class="text-center p-6 z-10">
+<span class="material-symbols-outlined text-4xl text-primary mb-2">rocket_launch</span>
+<h4 class="text-white font-bold text-lg">Quảng Cáo Của Bạn</h4>
+<p class="text-xs text-gray-400 mt-2">Liên hệ đặt banner tại vị trí này để tiếp cận hàng ngàn độc giả.</p>
+<button class="mt-4 px-4 py-2 bg-primary text-white text-xs font-bold rounded-full hover:bg-primary-hover transition-colors">Liên hệ ngay</button>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#150a0a] border-t border-[#4b2020] dark:border-gray-800 pt-12 pb-6 mt-12">
+<div class="max-w-[1200px] mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+<!-- Footer Col 1 -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<div class="size-6 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">terminal</span>
+</div>
+<h2 class="text-white text-lg font-bold">NHUIT</h2>
+</div>
+<p class="text-gray-400 text-sm leading-relaxed">
+                        Chuyên trang chia sẻ kiến thức máy tính, phần mềm, thủ thuật Windows và các bản Ghost Win chất lượng cao. Nơi cập nhật công nghệ nhanh chóng và chính xác.
+                    </p>
+</div>
+<!-- Footer Col 2 -->
+<div class="flex flex-col gap-4">
+<h3 class="text-white font-bold text-sm uppercase tracking-wide">Liên kết nhanh</h3>
+<ul class="flex flex-col gap-2 text-sm text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Điều khoản sử dụng</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Chính sách bảo mật</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Liên hệ quảng cáo</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Gửi bài viết</a></li>
+</ul>
+</div>
+<!-- Footer Col 3 -->
+<div class="flex flex-col gap-4">
+<h3 class="text-white font-bold text-sm uppercase tracking-wide">Tags phổ biến</h3>
+<div class="flex flex-wrap gap-2">
+<a class="px-3 py-1 bg-white/5 text-xs text-gray-400 hover:text-white hover:bg-primary rounded-full transition-colors" href="#">Windows 11</a>
+<a class="px-3 py-1 bg-white/5 text-xs text-gray-400 hover:text-white hover:bg-primary rounded-full transition-colors" href="#">Crack Office</a>
+<a class="px-3 py-1 bg-white/5 text-xs text-gray-400 hover:text-white hover:bg-primary rounded-full transition-colors" href="#">Ghost Win 10</a>
+<a class="px-3 py-1 bg-white/5 text-xs text-gray-400 hover:text-white hover:bg-primary rounded-full transition-colors" href="#">Driver</a>
+<a class="px-3 py-1 bg-white/5 text-xs text-gray-400 hover:text-white hover:bg-primary rounded-full transition-colors" href="#">IDM</a>
+<a class="px-3 py-1 bg-white/5 text-xs text-gray-400 hover:text-white hover:bg-primary rounded-full transition-colors" href="#">Thủ thuật</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-500 text-sm">© 2024 NHUIT. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-gray-500 hover:text-white transition-colors" href="#"><i class="fa-brands fa-facebook"></i></a>
+<a class="text-gray-500 hover:text-white transition-colors" href="#"><i class="fa-brands fa-twitter"></i></a>
+<a class="text-gray-500 hover:text-white transition-colors" href="#"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</div>
+</div>
+</footer>
 </body></html>
