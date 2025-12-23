@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IT Profesional</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13c8ec",
+                        "accent": "#facc15",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#111f22",
+                        "surface-dark": "#1a2c30",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased">
+<!-- Main Container -->
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-50 flex items-center bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm p-4 justify-between border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-2">
+<div class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-[24px]">token</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1">IT Profesional</h2>
+</div>
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined" style="font-size: 24px;">menu</span>
+</button>
+</header>
+<!-- Hero Section -->
+<section class="relative px-4 pb-8 pt-6">
+<!-- Background Glow Effect -->
+<div class="absolute top-0 right-0 -mr-20 -mt-20 h-64 w-64 rounded-full bg-primary/10 blur-3xl"></div>
+<div class="relative">
+<div class="mb-4 inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1">
+<span class="text-xs font-semibold uppercase tracking-wide text-primary">New Services Available</span>
+</div>
+<h1 class="text-4xl font-bold leading-[1.1] tracking-tight mb-4 text-slate-900 dark:text-white">
+                    Accelerate Your <br/>
+<span class="text-primary">Digital Transformation</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-relaxed mb-8 max-w-[90%] font-body">
+                    Custom software, cloud infrastructure, and cybersecurity solutions designed for the modern scalable enterprise.
+                </p>
+<div class="flex flex-col sm:flex-row gap-3 w-full">
+<button class="flex w-full items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-cyan-400 text-background-dark text-base font-bold transition-colors">
+                        Let's Talk
+                        <span class="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
+</button>
+<button class="flex w-full items-center justify-center rounded-lg h-12 px-6 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-900 dark:text-white text-base font-bold transition-colors">
+                        Learn More
+                    </button>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="w-full overflow-x-auto no-scrollbar pb-6 px-4">
+<div class="flex gap-4 min-w-max">
+<div class="flex flex-col justify-center min-w-[140px] rounded-xl p-5 bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[20px]">groups</span>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Clients</p>
+</div>
+<p class="text-3xl font-bold text-slate-900 dark:text-white">30+</p>
+</div>
+<div class="flex flex-col justify-center min-w-[140px] rounded-xl p-5 bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-accent text-[20px]">verified</span>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Experience</p>
+</div>
+<p class="text-3xl font-bold text-slate-900 dark:text-white">19<span class="text-lg text-slate-500 dark:text-slate-400 font-normal ml-1">yrs</span></p>
+</div>
+<div class="flex flex-col justify-center min-w-[140px] rounded-xl p-5 bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[20px]">rocket_launch</span>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Projects</p>
+</div>
+<p class="text-3xl font-bold text-slate-900 dark:text-white">100+</p>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="px-4 py-8 bg-slate-50 dark:bg-[#152529]">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Our Expertise</h3>
+<a class="text-primary text-sm font-medium hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Service 1 -->
+<div class="group relative flex flex-col gap-3 rounded-2xl p-4 bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-all">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<div>
+<h4 class="text-base font-bold text-slate-900 dark:text-white leading-tight mb-1">Software Dev</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-body">Custom enterprise apps</p>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="group relative flex flex-col gap-3 rounded-2xl p-4 bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-all">
+<div class="size-10 rounded-lg bg-red-500/10 flex items-center justify-center text-red-500 group-hover:bg-red-500 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">security</span>
+</div>
+<div>
+<h4 class="text-base font-bold text-slate-900 dark:text-white leading-tight mb-1">Cybersecurity</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-body">Audit &amp; Protection</p>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="group relative flex flex-col gap-3 rounded-2xl p-4 bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-all">
+<div class="size-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">cloud</span>
+</div>
+<div>
+<h4 class="text-base font-bold text-slate-900 dark:text-white leading-tight mb-1">Cloud Services</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-body">AWS &amp; Azure Migration</p>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="group relative flex flex-col gap-3 rounded-2xl p-4 bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-all">
+<div class="size-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-surface-dark transition-colors">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<div>
+<h4 class="text-base font-bold text-slate-900 dark:text-white leading-tight mb-1">Analytics</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-body">Data visualization</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Carousel -->
+<section class="py-8 pl-4">
+<div class="mb-4 pr-4">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Recent Work</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-body">Driving results for industry leaders</p>
+</div>
+<div class="flex overflow-x-auto gap-4 pb-4 no-scrollbar pr-4">
+<!-- Project 1 -->
+<div class="min-w-[280px] rounded-2xl overflow-hidden relative group">
+<div class="aspect-[4/3] w-full bg-gray-800 relative">
+<img alt="Fintech dashboard showing financial data charts" class="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-opacity" data-alt="Fintech dashboard showing financial data charts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi-BbWu3GFzSRMTeSNBh73HeJtJ3UzrMvz-nqgcm6DnNwtX0e75rLjjSztEvZQItFjH05kFvY3AmYMu1Ks5ig4FTT128_G1Shg7WRqS0BuwkOgs7Q-dRrtpsjWzZ2rtlrBcBZ_1C3H9s7iyvaIKi46Q0MY18W5Bf3PFrGJK3E9PovXEesk_XaGDGFHvhjG-VZEIVhEREiIZDm3P7CUEPCqC30t2watDxCvOseI3S8_b67Ixvn1HvwGE3BrAcLYlQFwZAPstXuOY6OM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-4">
+<span class="text-primary text-xs font-bold uppercase tracking-wider mb-1 block">FinTech</span>
+<h4 class="text-white text-lg font-bold">NeoBank Mobile App</h4>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="min-w-[280px] rounded-2xl overflow-hidden relative group">
+<div class="aspect-[4/3] w-full bg-gray-800 relative">
+<img alt="Medical data interface on tablet" class="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-opacity" data-alt="Medical data interface on tablet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATJ9OucE6mNRxiDbHga00LWWiN39pWmGFK6MkHQJCYRF1uNB8jRq2iChI06Ng5KlyamGYT6KyZ9_RIDkRLI1sZr70No2QdATZJ2EyHbNYykf4c-Rr77WJKvJbQnUUqGIModBYWUdyGfRJfLkeuR8GTOBwEsf9glqaI-MBkzY9JkF71KcYm897Nc1pKj-677I-QRNa4bJwByYM7ufSAgWMr0igDY-5KhprL9jnxAtiMpcIUVx7al-7JvrFw6QEPsjR_RkEL3wk7CL7A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-4">
+<span class="text-accent text-xs font-bold uppercase tracking-wider mb-1 block">Healthcare</span>
+<h4 class="text-white text-lg font-bold">Patient Data Portal</h4>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="min-w-[280px] rounded-2xl overflow-hidden relative group">
+<div class="aspect-[4/3] w-full bg-gray-800 relative">
+<img alt="Business analytics dashboard on laptop" class="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-opacity" data-alt="Business analytics dashboard on laptop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU8i8ujWwj-sFKq14dfhDXKSx2UqfjZ6wrRmO91Ipj6jmufhpuVcfh78kIJI-4YWibm8i2QtAczaVMnKaqA8BQyqQhCIP96Iz_K61aLK4Ff1yApTnYTQIh7iJxNWER7EVO-cas09RMQpT__rH__dgcYpH4aL22LLlvccUUgL3SxsF3t6f_6_WxoSd_zdOK8R-BM1G41EnrxAgHsIpXQrtkAGqVy6IwA-gKq88neIsV3_iHfmQWiwX0tXpe11c8Hg-Lf7uwmoJOO_fL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-4">
+<span class="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1 block">Enterprise</span>
+<h4 class="text-white text-lg font-bold">Sales Analytics CRM</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Blog/Insights Section -->
+<section class="px-4 py-8">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6">Latest Insights</h3>
+<div class="flex flex-col gap-6">
+<!-- Article 1 -->
+<a class="flex gap-4 group" href="#">
+<div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden bg-surface-dark">
+<img alt="Abstract AI neural network visualization" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Abstract AI neural network visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH3AFgNobbJiVux4EpNQPZ-THc1X0Cnj-idReGp6v-YKjEVmV2TF9hj1eoTJoxzP1aTUPSpllCdAnl-GlMCtx8fwragnCGdGzL7Dx8tobrTh12Ftmx7qdc8tjV5pjj8sOAAnM1bwoKKMijxqudQuC79hc4OqCZ41h4x5iKFQOMVlEBNTOaBX9JgCbHEFDrFjqujdbK9kUhVA5QzwwVVJA_nXm7dkL1EebDm469XbOBT3IB3kQR0yvw8bTsPbvTb0blfZwxLDiXQqB2"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-accent text-xs font-bold mb-1">AI &amp; ML</span>
+<h4 class="text-base font-bold text-slate-900 dark:text-white leading-tight mb-2 group-hover:text-primary transition-colors">The Future of Generative AI in B2B Operations</h4>
+<div class="flex items-center text-slate-500 dark:text-slate-400 text-xs">
+<span>5 min read</span>
+<span class="mx-2">•</span>
+<span>Oct 24</span>
+</div>
+</div>
+</a>
+<!-- Article 2 -->
+<a class="flex gap-4 group" href="#">
+<div class="w-24 h-24 shrink-0 rounded-lg overflow-hidden bg-surface-dark">
+<img alt="Digital lock representing cybersecurity" class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Digital lock representing cybersecurity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsHCBzRdctbMC7LoG2skFZSmlLr30EYEISNbUM1dTdz-nP8jxzvWSc2vUIEjP4fn3l4VD9mSCZnZEtjgDH80KDV8Nv7v7ET9EX5PaR7Cp3onMaH9eHNdEW0xYfw0DuroyMBsfIHtWYFtpF5xWUfZ_z_xUx9yE4wMQNr906IwLST98X6FBFrTR4clRA6Eo2J6CxQTieT38Uk5rPGbzoeaF8PteSvR4JCALb5Vd9WBUyEkVXWS2TCQqXHFS7vYgnB2UO0KxViyKejVij"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-primary text-xs font-bold mb-1">Security</span>
+<h4 class="text-base font-bold text-slate-900 dark:text-white leading-tight mb-2 group-hover:text-primary transition-colors">Top Cybersecurity Trends to Watch in 2024</h4>
+<div class="flex items-center text-slate-500 dark:text-slate-400 text-xs">
+<span>3 min read</span>
+<span class="mx-2">•</span>
+<span>Oct 18</span>
+</div>
+</div>
+</a>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-4 py-8 mb-8">
+<div class="rounded-2xl bg-gradient-to-br from-[#1b3339] to-background-dark border border-gray-800 p-6 text-center relative overflow-hidden">
+<!-- Decorative Circles -->
+<div class="absolute -top-12 -left-12 size-32 rounded-full bg-primary/10 blur-xl"></div>
+<div class="absolute -bottom-12 -right-12 size-32 rounded-full bg-accent/10 blur-xl"></div>
+<h3 class="relative text-2xl font-bold text-white mb-3">Ready to Scale?</h3>
+<p class="relative text-slate-400 text-sm mb-6 font-body">Let's build the technology that powers your next growth phase.</p>
+<button class="relative w-full rounded-lg bg-white text-background-dark font-bold py-3 px-6 hover:bg-gray-100 transition-colors">
+                    Get a Quote
+                </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-dark py-8 px-4 border-t border-gray-800 mt-auto">
+<div class="flex flex-col gap-8">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<div class="flex size-6 shrink-0 items-center justify-center rounded bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-[16px]">token</span>
+</div>
+<h2 class="text-white text-base font-bold">IT Profesional</h2>
+</div>
+<p class="text-slate-400 text-sm font-body max-w-xs">
+                        Empowering businesses with cutting-edge technology solutions since 2005.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h4 class="text-white font-bold mb-4">Services</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-400 font-body">
+<li><a class="hover:text-primary" href="#">Development</a></li>
+<li><a class="hover:text-primary" href="#">Cybersecurity</a></li>
+<li><a class="hover:text-primary" href="#">Cloud Ops</a></li>
+<li><a class="hover:text-primary" href="#">Consulting</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Company</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-400 font-body">
+<li><a class="hover:text-primary" href="#">About Us</a></li>
+<li><a class="hover:text-primary" href="#">Careers</a></li>
+<li><a class="hover:text-primary" href="#">Blog</a></li>
+<li><a class="hover:text-primary" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="flex items-center justify-between pt-8 border-t border-gray-800">
+<p class="text-slate-500 text-xs">© 2024 IT Profesional</p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-white" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a> <!-- abstract web icon for social -->
+<a class="text-slate-400 hover:text-white" href="#"><span class="material-symbols-outlined text-[20px]">alternate_email</span></a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Bottom Navigation (Optional for Mobile App Feel) -->
+<div class="fixed bottom-0 left-0 right-0 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur border-t border-gray-200 dark:border-gray-800 px-6 py-3 flex justify-between items-center z-50 sm:hidden">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-white" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-[10px] font-medium">Services</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-white" href="#">
+<span class="material-symbols-outlined">folder_open</span>
+<span class="text-[10px] font-medium">Work</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-white" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="text-[10px] font-medium">Contact</span>
+</a>
+</div>
+<!-- Spacer for Bottom Nav -->
+<div class="h-[70px] sm:hidden"></div>
+</div>
+</body></html>
