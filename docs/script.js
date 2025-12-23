@@ -53,12 +53,3 @@ window.addEventListener('resize', init);
 // Khởi chạy
 init();
 draw();
-
-// Get the div element
-const myDiv = document.getElementById('clickableDiv');
-
-// Add a click event listener
-myDiv.addEventListener('click', function() {
-    // Specify the URL to navigate to
-    window.location.href = 'https://ictcangio.github.io/page/techblog.html';
-});
