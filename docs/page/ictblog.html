@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <html class="dark" lang="en"><head>
+    <link rel="icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Tech Blog Homepage - NHUIT</title>
@@ -38,9 +40,55 @@
             overflow: hidden;
         }
     </style>
+
+<style>
+    .floating-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #007bff; /* Màu xanh chuyên nghiệp, bạn có thể đổi thành màu logo */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px; /* Bo tròn tạo sự dễ chịu */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 9999;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+/* Hiệu ứng khi di chuột vào (Hover) */
+.floating-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-5px); /* Nút bay lên nhẹ */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ẩn chữ trên màn hình điện thoại nhỏ nếu muốn chỉ để lại icon */
+@media (max-width: 480px) {
+  .btn-text {
+    display: none;
+  }
+  .floating-btn {
+    padding: 15px;
+    border-radius: 50%;
+  }
+}
+  </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden transition-colors duration-200">
-<!-- Header -->
+    <a href="https://ictcangio.github.io/" class="floating-btn" title="Về trang dịch vụ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span class="btn-text">TECH SOLUTIONS</span>
+      </a>
+    <!-- Header -->
 <header class="sticky top-0 z-50 w-full bg-[#240f0f] dark:bg-surface-dark border-b border-[#4b2020] dark:border-gray-800 shadow-md">
 <div class="max-w-[1200px] mx-auto px-4 h-16 flex items-center justify-between gap-4">
 <!-- Logo Area -->
